@@ -1,0 +1,86 @@
+/*****  bicycle ******/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(1670deg, #e3a81d 0%, #10dbee 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-image {
+  background-image: url(./img/sky.jpg);
+  background-size: cover;
+  width: 80vw;
+  height: 750px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.ground {
+  height: 150px;
+  width: 100%;
+  background-image: url(./img/Img_02.png);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+}
+
+.bicycle {
+  position: absolute;
+  bottom: 44px;
+  left: 20%;
+}
+
+.balon {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+}
+
+/* Animation */
+
+@keyframes go {
+  100% {
+    transform: translateX(1200px);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: translateY(-1px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+@keyframes up {
+  100% {
+    transform: translateY(-500px);
+  }
+}
+
+.pop {
+  animation: pop 0.8s linear infinite;
+}
+
+.go {
+  animation: go 15s linear infinite;
+}
+
+.up {
+  animation: up 15s linear infinite;
+}
